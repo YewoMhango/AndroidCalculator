@@ -1,5 +1,7 @@
 # AndroidCalculator
 
+![App Logo](/app%20icon.svg)
+
 Native android calculator app in Kotlin
 
 # Screenshot(s)
