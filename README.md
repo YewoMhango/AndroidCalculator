@@ -4,4 +4,4 @@
 Native android calculator app in Kotlin. (Supports Android 5.0 or greater)
 
 # Screenshot(s)
-<img src="./images/Screenshot.png" alt="Calculator App Screenshot" height="400px"/>
+<img src="./images/Screenshot.png" alt="Calculator App Screenshot" height="600px"/>
