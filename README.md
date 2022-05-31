@@ -1,8 +1,7 @@
 # AndroidCalculator
+<img src="./images/app icon.svg" alt="Calculator App Logo" height="60px"/>
 
-![App Logo](/images/app icon.svg)
-
-Native android calculator app in Kotlin
+Native android calculator app in Kotlin. (Supports Android 5.0 or greater)
 
 # Screenshot(s)
-![Screenshot of AndroidCalculator application](/images/Screenshot.png)
+<img src="./images/Screenshot.png" alt="Calculator App Screenshot" height="400px"/>
