@@ -41,9 +41,9 @@ class MainActivity : AppCompatActivity() {
         )
 
         buttonCharacterMap.forEach({ (buttonId, character) ->
-            findViewById<Button>(buttonId).setOnClickListener({
+            findViewById<Button>(buttonId).setOnClickListener {
                 enterCharacter(character)
-            })
+            }
         })
 
         findViewById<Button>(R.id.buttonEquals).setOnClickListener {
