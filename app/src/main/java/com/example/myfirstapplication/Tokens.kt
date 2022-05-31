@@ -5,7 +5,31 @@ import kotlin.math.sqrt
 
 
 class Tokens {
+    /**
+     * An abstract class representing tokens such as numbers, operators, constants
+     * and parentheses
+     *
+     * Its inheritance hierarchy is generally as follows:
+     *
+     * ```
+     * Token
+     *  ├── LeftParenthesis
+     *  ├── RightParenthesis
+     *  └── NumberOrOperator
+     *      ├── Number
+     *      ├── Constant
+     *      └── Operator
+     *          ├── BinaryOperator
+     *          └── UnaryOperator
+     * ```
+     */
     abstract class Token {
+        /**
+         * Determines whether `this` has higher operator precedence than `other`
+         *
+         * @param other The `Token` to compare the current one with
+         * @return True if the current `Token` has higher precedence than `other`
+         */
         fun hasHigherPrecedenceThan(other: Token): Boolean {
             val precedence = arrayListOf(
                 Negation(),
@@ -50,6 +74,7 @@ class Tokens {
         override fun getValue(): Number {
             return Number(kotlin.math.PI)
         }
+
         override fun toString(): String {
             return "π"
         }
@@ -58,6 +83,13 @@ class Tokens {
     abstract class Operator : NumberOrOperator()
 
     abstract class BinaryOperator : Operator() {
+        /**
+         * Performs a binary operation on two `Number`s
+         *
+         * @param val1 First operand
+         * @param val2 Second operand
+         * @return The result of the operation
+         */
         abstract fun executeOn(val1: Number, val2: Number): Number
     }
 
@@ -112,6 +144,12 @@ class Tokens {
     }
 
     abstract class UnaryOperator : Operator() {
+        /**
+         * Performs a unary operation on a `Number`
+         *
+         * @param value The operand
+         * @return The result of the operation
+         */
         abstract fun executeOn(value: Number): Number
     }
 
