@@ -12,92 +12,50 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        findViewById<Button>(R.id.button0).setOnClickListener {
-            enterCharacter('0')
-        }
-        findViewById<Button>(R.id.button1).setOnClickListener {
-            enterCharacter('1')
-        }
-        findViewById<Button>(R.id.button2).setOnClickListener {
-            enterCharacter('2')
-        }
-        findViewById<Button>(R.id.button3).setOnClickListener {
-            enterCharacter('3')
-        }
-        findViewById<Button>(R.id.button4).setOnClickListener {
-            enterCharacter('4')
-        }
-        findViewById<Button>(R.id.button5).setOnClickListener {
-            enterCharacter('5')
-        }
-        findViewById<Button>(R.id.button6).setOnClickListener {
-            enterCharacter('6')
-        }
-        findViewById<Button>(R.id.button7).setOnClickListener {
-            enterCharacter('7')
-        }
-        findViewById<Button>(R.id.button8).setOnClickListener {
-            enterCharacter('8')
-        }
-        findViewById<Button>(R.id.button9).setOnClickListener {
-            enterCharacter('9')
-        }
-        findViewById<Button>(R.id.buttonDiv).setOnClickListener {
-            enterCharacter('÷')
-        }
-        findViewById<Button>(R.id.buttonExp).setOnClickListener {
-            enterCharacter('^')
-        }
-        findViewById<Button>(R.id.buttonFact).setOnClickListener {
-            enterCharacter('!')
-        }
-        findViewById<Button>(R.id.buttonLPar).setOnClickListener {
-            enterCharacter('(')
-        }
-        findViewById<Button>(R.id.buttonMinus).setOnClickListener {
-            enterCharacter('-')
-        }
-        findViewById<Button>(R.id.buttonMul).setOnClickListener {
-            enterCharacter('×')
-        }
-        findViewById<Button>(R.id.buttonPlus).setOnClickListener {
-            enterCharacter('+')
-        }
-        findViewById<Button>(R.id.buttonPoint).setOnClickListener {
-            enterCharacter('.')
-        }
-        findViewById<Button>(R.id.buttonRPar).setOnClickListener {
-            enterCharacter(')')
-        }
-        findViewById<Button>(R.id.buttonSin).setOnClickListener {
-            enterCharacter('s')
-        }
-        findViewById<Button>(R.id.buttonCos).setOnClickListener {
-            enterCharacter('c')
-        }
-        findViewById<Button>(R.id.buttonTan).setOnClickListener {
-            enterCharacter('t')
-        }
-        findViewById<Button>(R.id.buttonPi).setOnClickListener {
-            enterCharacter('π')
-        }
-        findViewById<Button>(R.id.buttonSqr).setOnClickListener {
-            enterCharacter('²')
-        }
-        findViewById<Button>(R.id.buttonSqrt).setOnClickListener {
-            enterCharacter('√')
-        }
+        val buttonCharacterMap = mapOf(
+            R.id.button0 to '0',
+            R.id.button1 to '1',
+            R.id.button2 to '2',
+            R.id.button3 to '3',
+            R.id.button4 to '4',
+            R.id.button5 to '5',
+            R.id.button6 to '6',
+            R.id.button7 to '7',
+            R.id.button8 to '8',
+            R.id.button9 to '9',
+            R.id.buttonDiv to '÷',
+            R.id.buttonExp to '^',
+            R.id.buttonFact to '!',
+            R.id.buttonLPar to '(',
+            R.id.buttonMinus to '-',
+            R.id.buttonMul to '×',
+            R.id.buttonPlus to '+',
+            R.id.buttonPoint to '.',
+            R.id.buttonRPar to ')',
+            R.id.buttonSin to 's',
+            R.id.buttonCos to 'c',
+            R.id.buttonTan to 't',
+            R.id.buttonPi to 'π',
+            R.id.buttonSqr to '²',
+            R.id.buttonSqrt to '√',
+        )
 
-        findViewById<Button>(R.id.buttonEq).setOnClickListener {
+        buttonCharacterMap.forEach({ buttonId, character ->
+            findViewById<Button>(buttonId).setOnClickListener({
+                enterCharacter(character)
+            })
+        })
+
+        findViewById<Button>(R.id.buttonEquals).setOnClickListener {
             buttonEqualsPressed()
         }
-        findViewById<Button>(R.id.buttonC).setOnClickListener {
+        findViewById<Button>(R.id.buttonBackspace).setOnClickListener {
             if (characters.size > 0) {
                 characters.removeLast()
                 updateInputAndOutput()
             }
         }
-        findViewById<Button>(R.id.buttonCE).setOnClickListener {
+        findViewById<Button>(R.id.buttonClear).setOnClickListener {
             characters = mutableListOf<Char>()
             updateInputAndOutput()
         }
@@ -114,17 +72,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateInput() {
-        var acc = ""
+        var inputString = ""
 
         for (t in characters) {
-            acc += "$t"
+            inputString += "$t"
         }
 
-        acc = acc.replace("s", "sin")
-        acc = acc.replace("c", "cos")
-        acc = acc.replace("t", "tan")
+        inputString = inputString.replace("s", "sin")
+        inputString = inputString.replace("c", "cos")
+        inputString = inputString.replace("t", "tan")
 
-        findViewById<TextView>(R.id.input).text = acc
+        findViewById<TextView>(R.id.input).text = inputString
     }
 
     private fun updateOutput() {
