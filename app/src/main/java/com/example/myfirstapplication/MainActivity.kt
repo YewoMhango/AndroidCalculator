@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
             R.id.buttonSqrt to '√',
         )
 
-        buttonCharacterMap.forEach({ buttonId, character ->
+        buttonCharacterMap.forEach({ (buttonId, character) ->
             findViewById<Button>(buttonId).setOnClickListener({
                 enterCharacter(character)
             })
