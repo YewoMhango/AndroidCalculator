@@ -148,6 +148,7 @@ class MainActivity : AppCompatActivity() {
             val result = evaluatePostfix(postfix)
 
             characters = displayResultToOutput(result).toMutableList()
+            findViewById<TextView>(R.id.answer).text = ""
 
             updateInput()
         } else {
