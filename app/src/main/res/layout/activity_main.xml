@@ -59,7 +59,7 @@
                 android:textSize="24sp" />
 
             <Button
-                android:id="@+id/buttonCE"
+                android:id="@+id/buttonClear"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="90dp"
                 android:layout_height="48dp"
@@ -69,7 +69,7 @@
                 android:textSize="24sp" />
 
             <Button
-                android:id="@+id/buttonC"
+                android:id="@+id/buttonBackspace"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="90dp"
                 android:layout_height="48dp"
@@ -362,7 +362,7 @@
                 android:textSize="24sp" />
 
             <Button
-                android:id="@+id/buttonEq"
+                android:id="@+id/buttonEquals"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="90dp"
                 android:layout_height="48dp"
