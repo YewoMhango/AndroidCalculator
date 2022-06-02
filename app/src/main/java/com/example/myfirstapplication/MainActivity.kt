@@ -14,6 +14,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         this.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 
+        /**
+         * Represents the symbol which each button is supposed to input when clicked
+         */
         val buttonCharacterMap = mapOf(
             R.id.button0 to '0',
             R.id.button1 to '1',
