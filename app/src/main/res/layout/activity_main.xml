@@ -65,7 +65,7 @@
                     android:fontFamily="@font/montserrat"
                     android:text="("
                     android:textColor="@color/purple_200"
-                    android:textSize="24sp" />
+                    android:textSize="22sp" />
 
                 <Button
                     android:id="@+id/buttonRPar"
@@ -75,7 +75,7 @@
                     android:fontFamily="@font/montserrat"
                     android:text=")"
                     android:textColor="@color/purple_200"
-                    android:textSize="24sp" />
+                    android:textSize="22sp" />
 
                 <Button
                     android:id="@+id/buttonClear"
@@ -85,7 +85,7 @@
                     android:fontFamily="@font/montserrat"
                     android:text="CE"
                     android:textColor="@color/purple_200"
-                    android:textSize="24sp" />
+                    android:textSize="22sp" />
 
                 <Button
                     android:id="@+id/buttonBackspace"
@@ -95,107 +95,12 @@
                     android:fontFamily="@font/montserrat"
                     android:text="ᐊ"
                     android:textColor="@color/purple_200"
-                    android:textSize="24sp" />
+                    android:textSize="22sp" />
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:weightSum="4">
-
-                <Button
-                    android:id="@+id/buttonFact"
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/montserrat"
-                    android:text="!"
-                    android:textColor="@color/purple_200"
-                    android:textSize="24sp" />
-
-                <Button
-                    android:id="@+id/buttonE"
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/montserrat"
-                    android:text="e"
-                    android:textColor="@color/purple_200"
-                    android:textSize="24sp" />
-
-                <Button
-                    android:id="@+id/buttonLn"
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/montserrat"
-                    android:text="ln"
-                    android:textColor="@color/purple_200"
-                    android:textSize="24sp" />
-
-                <Button
-                    android:id="@+id/buttonLog"
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/montserrat"
-                    android:text="log"
-                    android:textColor="@color/purple_200"
-                    android:textSize="24sp" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_weight="1"
-                android:weightSum="4">
-
-                <Button
-                    android:id="@+id/buttonCbrt"
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/montserrat"
-                    android:text="³√"
-                    android:textColor="@color/purple_200"
-                    android:textSize="24sp" />
-
-                <Button
-                    android:id="@+id/buttonSin"
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/montserrat"
-                    android:text="sin"
-                    android:textColor="@color/purple_200"
-                    android:textSize="24sp" />
-
-                <Button
-                    android:id="@+id/buttonCos"
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/montserrat"
-                    android:text="cos"
-                    android:textColor="@color/purple_200"
-                    android:textSize="24sp" />
-
-                <Button
-                    android:id="@+id/buttonTan"
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/montserrat"
-                    android:text="tan"
-                    android:textColor="@color/purple_200"
-                    android:textSize="24sp" />
-
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
                 android:layout_weight="1"
                 android:weightSum="4">
 
@@ -207,17 +112,7 @@
                     android:fontFamily="@font/montserrat"
                     android:text="Xʸ"
                     android:textColor="@color/purple_200"
-                    android:textSize="24sp" />
-
-                <Button
-                    android:id="@+id/buttonSqr"
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/montserrat"
-                    android:text="x²"
-                    android:textColor="@color/purple_200"
-                    android:textSize="24sp" />
+                    android:textSize="22sp" />
 
                 <Button
                     android:id="@+id/buttonSqrt"
@@ -227,7 +122,113 @@
                     android:fontFamily="@font/montserrat"
                     android:text="√"
                     android:textColor="@color/purple_200"
-                    android:textSize="24sp" />
+                    android:textSize="22sp" />
+
+                <Button
+                    android:id="@+id/buttonSqr"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat"
+                    android:text="x²"
+                    android:textColor="@color/purple_200"
+                    android:textSize="22sp" />
+
+                <Button
+                    android:id="@+id/buttonCbrt"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat"
+                    android:text="³√"
+                    android:textColor="@color/purple_200"
+                    android:textSize="22sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:weightSum="4">
+
+                <Button
+                    android:id="@+id/buttonSin"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat"
+                    android:text="sin"
+                    android:textColor="@color/purple_200"
+                    android:textSize="22sp" />
+
+                <Button
+                    android:id="@+id/buttonCos"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat"
+                    android:text="cos"
+                    android:textColor="@color/purple_200"
+                    android:textSize="22sp" />
+
+                <Button
+                    android:id="@+id/buttonTan"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat"
+                    android:text="tan"
+                    android:textColor="@color/purple_200"
+                    android:textSize="22sp" />
+
+                <Button
+                    android:id="@+id/buttonFact"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat"
+                    android:text="!"
+                    android:textColor="@color/purple_200"
+                    android:textSize="22sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:weightSum="4">
+
+                <Button
+                    android:id="@+id/buttonLn"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat"
+                    android:text="ln"
+                    android:textColor="@color/purple_200"
+                    android:textSize="22sp" />
+
+                <Button
+                    android:id="@+id/buttonE"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat"
+                    android:text="e"
+                    android:textColor="@color/purple_200"
+                    android:textSize="22sp" />
+
+                <Button
+                    android:id="@+id/buttonLog"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat"
+                    android:text="log"
+                    android:textColor="@color/purple_200"
+                    android:textSize="22sp" />
 
                 <Button
                     android:id="@+id/buttonMul"
@@ -237,7 +238,7 @@
                     android:fontFamily="@font/montserrat"
                     android:text="×"
                     android:textColor="@color/purple_200"
-                    android:textSize="24sp" />
+                    android:textSize="22sp" />
 
             </TableRow>
 
@@ -255,7 +256,7 @@
                     android:fontFamily="@font/montserrat"
                     android:text="7"
                     android:textColor="@color/purple_200"
-                    android:textSize="24sp" />
+                    android:textSize="22sp" />
 
                 <Button
                     android:id="@+id/button8"
@@ -265,7 +266,7 @@
                     android:fontFamily="@font/montserrat"
                     android:text="8"
                     android:textColor="@color/purple_200"
-                    android:textSize="24sp" />
+                    android:textSize="22sp" />
 
                 <Button
                     android:id="@+id/button9"
@@ -275,7 +276,7 @@
                     android:fontFamily="@font/montserrat"
                     android:text="9"
                     android:textColor="@color/purple_200"
-                    android:textSize="24sp" />
+                    android:textSize="22sp" />
 
                 <Button
                     android:id="@+id/buttonDiv"
@@ -285,7 +286,7 @@
                     android:fontFamily="@font/montserrat"
                     android:text="÷"
                     android:textColor="@color/purple_200"
-                    android:textSize="24sp" />
+                    android:textSize="22sp" />
 
             </TableRow>
 
@@ -303,7 +304,7 @@
                     android:fontFamily="@font/montserrat"
                     android:text="4"
                     android:textColor="@color/purple_200"
-                    android:textSize="24sp" />
+                    android:textSize="22sp" />
 
                 <Button
                     android:id="@+id/button5"
@@ -313,7 +314,7 @@
                     android:fontFamily="@font/montserrat"
                     android:text="5"
                     android:textColor="@color/purple_200"
-                    android:textSize="24sp" />
+                    android:textSize="22sp" />
 
                 <Button
                     android:id="@+id/button6"
@@ -323,7 +324,7 @@
                     android:fontFamily="@font/montserrat"
                     android:text="6"
                     android:textColor="@color/purple_200"
-                    android:textSize="24sp" />
+                    android:textSize="22sp" />
 
                 <Button
                     android:id="@+id/buttonMinus"
@@ -333,7 +334,7 @@
                     android:fontFamily="@font/montserrat"
                     android:text="-"
                     android:textColor="@color/purple_200"
-                    android:textSize="24sp" />
+                    android:textSize="22sp" />
 
             </TableRow>
 
@@ -351,7 +352,7 @@
                     android:fontFamily="@font/montserrat"
                     android:text="1"
                     android:textColor="@color/purple_200"
-                    android:textSize="24sp" />
+                    android:textSize="22sp" />
 
                 <Button
                     android:id="@+id/button2"
@@ -361,7 +362,7 @@
                     android:fontFamily="@font/montserrat"
                     android:text="2"
                     android:textColor="@color/purple_200"
-                    android:textSize="24sp" />
+                    android:textSize="22sp" />
 
                 <Button
                     android:id="@+id/button3"
@@ -371,7 +372,7 @@
                     android:fontFamily="@font/montserrat"
                     android:text="3"
                     android:textColor="@color/purple_200"
-                    android:textSize="24sp" />
+                    android:textSize="22sp" />
 
                 <Button
                     android:id="@+id/buttonPlus"
@@ -381,7 +382,7 @@
                     android:fontFamily="@font/montserrat"
                     android:text="+"
                     android:textColor="@color/purple_200"
-                    android:textSize="24sp" />
+                    android:textSize="22sp" />
 
             </TableRow>
 
@@ -399,7 +400,7 @@
                     android:fontFamily="@font/montserrat"
                     android:text="π"
                     android:textColor="@color/purple_200"
-                    android:textSize="24sp" />
+                    android:textSize="22sp" />
 
                 <Button
                     android:id="@+id/button0"
@@ -409,7 +410,7 @@
                     android:fontFamily="@font/montserrat"
                     android:text="0"
                     android:textColor="@color/purple_200"
-                    android:textSize="24sp"
+                    android:textSize="22sp"
                     tools:text="0" />
 
                 <Button
@@ -420,7 +421,7 @@
                     android:fontFamily="@font/montserrat"
                     android:text="."
                     android:textColor="@color/purple_200"
-                    android:textSize="24sp" />
+                    android:textSize="22sp" />
 
                 <Button
                     android:id="@+id/buttonEquals"
@@ -430,7 +431,7 @@
                     android:fontFamily="@font/montserrat"
                     android:text="="
                     android:textColor="@color/purple_200"
-                    android:textSize="24sp" />
+                    android:textSize="22sp" />
 
             </TableRow>
 
