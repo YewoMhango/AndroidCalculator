@@ -49,11 +49,11 @@
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             android:layout_weight="7"
-            android:weightSum="7">
+            android:weightSum="8">
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:weightSum="4">
 
@@ -61,7 +61,6 @@
                     android:id="@+id/buttonLPar"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_height="match_parent"
-                    android:layout_margin="3sp"
                     android:layout_weight="1"
                     android:fontFamily="@font/montserrat"
                     android:text="("
@@ -72,7 +71,6 @@
                     android:id="@+id/buttonRPar"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_height="match_parent"
-                    android:layout_margin="3sp"
                     android:layout_weight="1"
                     android:fontFamily="@font/montserrat"
                     android:text=")"
@@ -102,7 +100,7 @@
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:weightSum="4">
 
@@ -110,10 +108,56 @@
                     android:id="@+id/buttonFact"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_height="match_parent"
-                    android:layout_margin="3sp"
                     android:layout_weight="1"
                     android:fontFamily="@font/montserrat"
                     android:text="!"
+                    android:textColor="@color/purple_200"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/buttonE"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat"
+                    android:text="e"
+                    android:textColor="@color/purple_200"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/buttonLn"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat"
+                    android:text="ln"
+                    android:textColor="@color/purple_200"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/buttonLog"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat"
+                    android:text="log"
+                    android:textColor="@color/purple_200"
+                    android:textSize="24sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:weightSum="4">
+
+                <Button
+                    android:id="@+id/buttonCbrt"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat"
+                    android:text="³√"
                     android:textColor="@color/purple_200"
                     android:textSize="24sp" />
 
@@ -159,7 +203,6 @@
                     android:id="@+id/buttonExp"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_height="match_parent"
-                    android:layout_margin="3sp"
                     android:layout_weight="1"
                     android:fontFamily="@font/montserrat"
                     android:text="Xʸ"
@@ -190,7 +233,6 @@
                     android:id="@+id/buttonMul"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_height="match_parent"
-                    android:layout_margin="3sp"
                     android:layout_weight="1"
                     android:fontFamily="@font/montserrat"
                     android:text="×"
@@ -209,7 +251,6 @@
                     android:id="@+id/button7"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_height="match_parent"
-                    android:layout_margin="3sp"
                     android:layout_weight="1"
                     android:fontFamily="@font/montserrat"
                     android:text="7"
@@ -220,7 +261,6 @@
                     android:id="@+id/button8"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_height="match_parent"
-                    android:layout_margin="3sp"
                     android:layout_weight="1"
                     android:fontFamily="@font/montserrat"
                     android:text="8"
@@ -231,7 +271,6 @@
                     android:id="@+id/button9"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_height="match_parent"
-                    android:layout_margin="3sp"
                     android:layout_weight="1"
                     android:fontFamily="@font/montserrat"
                     android:text="9"
@@ -242,7 +281,6 @@
                     android:id="@+id/buttonDiv"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_height="match_parent"
-                    android:layout_margin="3sp"
                     android:layout_weight="1"
                     android:fontFamily="@font/montserrat"
                     android:text="÷"
@@ -261,7 +299,6 @@
                     android:id="@+id/button4"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_height="match_parent"
-                    android:layout_margin="3sp"
                     android:layout_weight="1"
                     android:fontFamily="@font/montserrat"
                     android:text="4"
@@ -272,7 +309,6 @@
                     android:id="@+id/button5"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_height="match_parent"
-                    android:layout_margin="3sp"
                     android:layout_weight="1"
                     android:fontFamily="@font/montserrat"
                     android:text="5"
@@ -283,7 +319,6 @@
                     android:id="@+id/button6"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_height="match_parent"
-                    android:layout_margin="3sp"
                     android:layout_weight="1"
                     android:fontFamily="@font/montserrat"
                     android:text="6"
@@ -294,7 +329,6 @@
                     android:id="@+id/buttonMinus"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_height="match_parent"
-                    android:layout_margin="3sp"
                     android:layout_weight="1"
                     android:fontFamily="@font/montserrat"
                     android:text="-"
@@ -313,7 +347,6 @@
                     android:id="@+id/button1"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_height="match_parent"
-                    android:layout_margin="3sp"
                     android:layout_weight="1"
                     android:fontFamily="@font/montserrat"
                     android:text="1"
@@ -324,7 +357,6 @@
                     android:id="@+id/button2"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_height="match_parent"
-                    android:layout_margin="3sp"
                     android:layout_weight="1"
                     android:fontFamily="@font/montserrat"
                     android:text="2"
@@ -335,7 +367,6 @@
                     android:id="@+id/button3"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_height="match_parent"
-                    android:layout_margin="3sp"
                     android:layout_weight="1"
                     android:fontFamily="@font/montserrat"
                     android:text="3"
@@ -346,7 +377,6 @@
                     android:id="@+id/buttonPlus"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_height="match_parent"
-                    android:layout_margin="3sp"
                     android:layout_weight="1"
                     android:fontFamily="@font/montserrat"
                     android:text="+"
@@ -375,7 +405,6 @@
                     android:id="@+id/button0"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_height="match_parent"
-                    android:layout_margin="3sp"
                     android:layout_weight="1"
                     android:fontFamily="@font/montserrat"
                     android:text="0"
@@ -387,7 +416,6 @@
                     android:id="@+id/buttonPoint"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_height="match_parent"
-                    android:layout_margin="3sp"
                     android:layout_weight="1"
                     android:fontFamily="@font/montserrat"
                     android:text="."
@@ -398,7 +426,6 @@
                     android:id="@+id/buttonEquals"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_height="match_parent"
-                    android:layout_margin="3sp"
                     android:layout_weight="1"
                     android:fontFamily="@font/montserrat"
                     android:text="="

@@ -1,7 +1,6 @@
 package com.example.myfirstapplication
 
 import kotlin.math.pow
-import kotlin.math.sqrt
 
 
 class Tokens {
@@ -15,17 +14,17 @@ class Tokens {
      * Token
      *  ├── LeftParenthesis
      *  ├── RightParenthesis
-     *  └── NumberOrOperator
-     *      ├── Number
-     *      ├── Constant
-     *      └── Operator
-     *          ├── BinaryOperator
-     *          └── UnaryOperator
+     *  ├── Value
+     *  │   ├── Number
+     *  │   └── Constant
+     *  └── Operator
+     *      ├── BinaryOperator
+     *      └── UnaryOperator
      * ```
      */
     abstract class Token {
         /**
-         * Determines whether `this` has higher operator precedence than `other`
+         * Determines whether this token has higher operator precedence than `other`
          *
          * @param other The `Token` to compare the current one with
          * @return True if the current `Token` has higher precedence than `other`
@@ -34,7 +33,15 @@ class Tokens {
             val precedence = arrayListOf(
                 Negation(),
                 Factorial(),
+                Log(),
+                Ln(),
+                Sin(),
+                Cos(),
+                Tan(),
+                Square(),
                 Exponentiation(),
+                SquareRoot(),
+                CubeRoot(),
                 Divide(),
                 Multiply(),
                 Plus(),
@@ -57,15 +64,15 @@ class Tokens {
         }
     }
 
-    abstract class NumberOrOperator : Token()
+    abstract class Value : Token()
 
-    class Number(val value: Double) : NumberOrOperator() {
+    class Number(val value: Double) : Value() {
         override fun toString(): String {
             return this.value.toString()
         }
     }
 
-    abstract class Constant() : NumberOrOperator() {
+    abstract class Constant() : Value() {
         abstract fun getValue(): Number
         abstract override fun toString(): String
     }
@@ -80,7 +87,17 @@ class Tokens {
         }
     }
 
-    abstract class Operator : NumberOrOperator()
+    class E() : Constant() {
+        override fun getValue(): Number {
+            return Number(kotlin.math.E)
+        }
+
+        override fun toString(): String {
+            return "e"
+        }
+    }
+
+    abstract class Operator : Token()
 
     abstract class BinaryOperator : Operator() {
         /**
@@ -155,18 +172,13 @@ class Tokens {
 
     class Factorial : UnaryOperator() {
         override fun executeOn(value: Number): Number {
-            fun factorial(n: Long): Long {
-                return (
-                        if (n < 2) 1
-                        else n * factorial(n - 1)
-                        )
+            var accumulator: Double = 1.0
+
+            for (i in 2..value.value.toInt()) {
+                accumulator *= i
             }
 
-            return Number(
-                factorial(
-                    value.value.toLong()
-                ).toDouble()
-            )
+            return Number(accumulator)
         }
 
         override fun toString(): String {
@@ -197,11 +209,21 @@ class Tokens {
 
     class SquareRoot : UnaryOperator() {
         override fun executeOn(value: Number): Number {
-            return Number(sqrt(value.value))
+            return Number(kotlin.math.sqrt(value.value))
         }
 
         override fun toString(): String {
             return "√"
+        }
+    }
+
+    class CubeRoot : UnaryOperator() {
+        override fun executeOn(value: Number): Number {
+            return Number(value.value.pow(1.0 / 3.0))
+        }
+
+        override fun toString(): String {
+            return "³√"
         }
     }
 
@@ -232,6 +254,26 @@ class Tokens {
 
         override fun toString(): String {
             return "tan"
+        }
+    }
+
+    class Log : UnaryOperator() {
+        override fun executeOn(value: Number): Number {
+            return Number(kotlin.math.log10(value.value))
+        }
+
+        override fun toString(): String {
+            return "log"
+        }
+    }
+
+    class Ln : UnaryOperator() {
+        override fun executeOn(value: Number): Number {
+            return Number(kotlin.math.log2(value.value))
+        }
+
+        override fun toString(): String {
+            return "ln"
         }
     }
 }

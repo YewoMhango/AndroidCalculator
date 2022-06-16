@@ -27,10 +27,14 @@ fun parse(input: Array<Char>): Array<Tokens.Token>? {
                 ')' -> Tokens.RightParenthesis()
                 '√' -> Tokens.SquareRoot()
                 '²' -> Tokens.Square()
+                '³' -> Tokens.CubeRoot()
                 'π' -> Tokens.Pi()
+                'e' -> Tokens.E()
                 't' -> Tokens.Tan()
                 'c' -> Tokens.Cos()
                 's' -> Tokens.Sin()
+                'l' -> Tokens.Log()
+                'n' -> Tokens.Ln()
                 else -> {
                     if (input[i].isDigit() || input[i] == '.') {
                         var numberString = ""

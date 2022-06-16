@@ -12,7 +12,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        this.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 
         /**
          * Represents the symbol which each button is supposed to input when clicked
@@ -43,6 +42,10 @@ class MainActivity : AppCompatActivity() {
             R.id.buttonPi to 'π',
             R.id.buttonSqr to '²',
             R.id.buttonSqrt to '√',
+            R.id.buttonE to 'e',
+            R.id.buttonLog to 'l',
+            R.id.buttonLn to 'n',
+            R.id.buttonCbrt to '³'
         )
 
         buttonCharacterMap.forEach({ (buttonId, character) ->
@@ -83,9 +86,13 @@ class MainActivity : AppCompatActivity() {
             inputString += "$t"
         }
 
+
+        inputString = inputString.replace("l", "log")
+        inputString = inputString.replace("n", "ln")
         inputString = inputString.replace("s", "sin")
         inputString = inputString.replace("c", "cos")
         inputString = inputString.replace("t", "tan")
+        inputString = inputString.replace("³", "³√")
 
         findViewById<TextView>(R.id.input).text = inputString
     }
