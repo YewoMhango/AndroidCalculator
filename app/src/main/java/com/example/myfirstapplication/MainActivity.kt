@@ -1,8 +1,8 @@
 package com.example.myfirstapplication
 
-import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.widget.Button
 import android.widget.TextView
 
@@ -11,7 +11,18 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        if (savedInstanceState != null) {
+            val storedInput = savedInstanceState.getString("input")
+
+            if (storedInput != null) {
+                characters = storedInput.toMutableList()
+            }
+        }
+
         setContentView(R.layout.activity_main)
+
+        updateInputAndOutput()
 
         /**
          * Represents the symbol which each button is supposed to input when clicked
@@ -69,6 +80,28 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    override fun onRestoreInstanceState(
+        savedInstanceState: Bundle?,
+        persistentState: PersistableBundle?
+    ) {
+        if (savedInstanceState != null) {
+            val storedInput = savedInstanceState.getString("input")
+
+            if (storedInput != null) {
+                characters = storedInput.toMutableList()
+            }
+
+            super.onRestoreInstanceState(savedInstanceState)
+
+            updateInputAndOutput()
+        }
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putString("input", concatenateInputToString())
+    }
+
     private fun enterCharacter(char: Char) {
         characters.add(char)
         updateInputAndOutput()
@@ -79,13 +112,18 @@ class MainActivity : AppCompatActivity() {
         updateOutput()
     }
 
-    private fun updateInput() {
+    private fun concatenateInputToString(): String {
         var inputString = ""
 
         for (t in characters) {
             inputString += "$t"
         }
 
+        return inputString
+    }
+
+    private fun updateInput() {
+        var inputString = concatenateInputToString()
 
         inputString = inputString.replace("l", "log")
         inputString = inputString.replace("n", "ln")
