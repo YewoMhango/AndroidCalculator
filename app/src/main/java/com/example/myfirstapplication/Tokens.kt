@@ -229,7 +229,11 @@ class Tokens {
 
     class Sin : UnaryOperator() {
         override fun executeOn(value: Number): Number {
-            return Number(kotlin.math.sin(value.value))
+            return Number(
+                kotlin.math.sin(
+                    degreesToRadians(value.value)
+                )
+            )
         }
 
         override fun toString(): String {
@@ -239,7 +243,11 @@ class Tokens {
 
     class Cos : UnaryOperator() {
         override fun executeOn(value: Number): Number {
-            return Number(kotlin.math.cos(value.value))
+            return Number(
+                kotlin.math.cos(
+                    degreesToRadians(value.value)
+                )
+            )
         }
 
         override fun toString(): String {
@@ -249,7 +257,11 @@ class Tokens {
 
     class Tan : UnaryOperator() {
         override fun executeOn(value: Number): Number {
-            return Number(kotlin.math.tan(value.value))
+            return Number(
+                kotlin.math.tan(
+                    degreesToRadians(value.value)
+                )
+            )
         }
 
         override fun toString(): String {
@@ -276,4 +288,8 @@ class Tokens {
             return "ln"
         }
     }
+}
+
+private fun degreesToRadians(degrees: Double): Double {
+    return degrees * kotlin.math.PI / 180.0
 }
